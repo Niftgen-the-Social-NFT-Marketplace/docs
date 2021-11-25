@@ -90,17 +90,24 @@
         const $tr = document.createElement('tr');
 
         const $td1 = document.createElement('td');
+        const $a = document.createElement('a');
+        $a.target = `_blank`;
+        $a.href = `./${image}`;
         const $img = document.createElement('img');
         $img.src = `./${image}`;
         $img.style.maxWidth = '200px';
         $img.style.maxHeight = '200px';
-        $td1.appendChild($img);
+        $a.appendChild($img);
+        $td1.appendChild($a);
 
         const $td2 = document.createElement('td');
-        const $a = document.createElement('a');
-        $a.href = `./${image}`;
-        $a.innerHTML = $a.href;
-        $td2.appendChild($a);
+        const fullUrl = $a.href;
+
+        const $pre = document.createElement('pre');
+        $pre.innerHTML = `![${image.replace('images/', '')}](${fullUrl})`
+        $pre.style.cursor = 'pointer';
+        $pre.onclick = () => navigator.clipboard.writeText($pre.innerHTML)
+        $td2.appendChild($pre);
 
         $tr.appendChild($td1);
         $tr.appendChild($td2);
