@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Images</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      const images = [
+        'images/Buying ALGOs from Kraken Desktop/Screen 5 - Choose Bank.png',
+        'images/Buying ALGOs from Kraken Desktop/Screen 4 - Add Bank Account.png',
+        'images/Buying ALGOs from Kraken Desktop/Screen 1 - Buy Crypto.png',
+        'images/Buying ALGOs from Kraken Desktop/Screen 2 - Select Cyptocurency.png',
+        'images/Buying ALGOs from Kraken Desktop/Screen 3 - Choose amount and payment option.png',
+        'images/Buying ALGOs from Kraken Desktop/Screen 6 - Confirm.png',
+        'images/Transfering ALGOs from Kraken Desktop/Screen 3 Add Withdrawal Address.png',
+        'images/Transfering ALGOs from Kraken Desktop/Screen 6 Choose Address.png',
+        'images/Transfering ALGOs from Kraken Desktop/Screen 5 Enter the Amount.png',
+        'images/Transfering ALGOs from Kraken Desktop/Screen 1 Funding-Withdraw.png',
+        'images/Transfering ALGOs from Kraken Desktop/Screen 4 Add new wallet details.png',
+        'images/Transfering ALGOs from Kraken Desktop/Screen 7 Withdrawal.png',
+        'images/Transfering ALGOs from Kraken Desktop/Screen 2 Choose Crypto to withdraw.png',
+        'images/Buying Algos from Coinbase Desktop/Screen 1 - Buy-Sell.png',
+        'images/Buying Algos from Coinbase Desktop/Screen 2 - Buy Algorand.png',
+        'images/Buying Algos from Coinbase Desktop/Screen 3 - Buy now.png',
+        'images/Buying Algos from Coinebase App/Screen 2 - Select Algorand.png',
+        'images/Buying Algos from Coinebase App/Screen 3 - Preview Buy.png',
+        'images/Buying Algos from Coinebase App/Screen 1 - Send-Receive.png',
+        'images/Buying Algos from Coinebase App/Screen 4 - Confirm Buy.png',
+        'images/Transfering ALGOs from Kraken Mobile/Screen 6 - Add Address.png',
+        'images/Transfering ALGOs from Kraken Mobile/Screen 2 - Withdraw option from dropdown.jpg',
+        'images/Transfering ALGOs from Kraken Mobile/Screen 8 - Email Confimation.png',
+        'images/Transfering ALGOs from Kraken Mobile/Screen 7 - Memo.png',
+        'images/Transfering ALGOs from Kraken Mobile/Screen 9 - Swipe to Confirm.png',
+        'images/Transfering ALGOs from Kraken Mobile/Screen 4 - Choose Amonut and enter new address.png',
+        'images/Transfering ALGOs from Kraken Mobile/Screen 3 - Choose Option.jpg',
+        'images/Transfering ALGOs from Kraken Mobile/Screen 5 - Description of New Adress.png',
+        'images/Transfering ALGOs from Kraken Mobile/Screen 1 - Button on bottom far right.jpg',
+        'images/Set up MyAlgo Wallet/Screenshot 4 Add Wallet.png',
+        'images/Set up MyAlgo Wallet/Screenshot 6 Mnemonic Cards.png',
+        'images/Set up MyAlgo Wallet/Screenshot 3 Create and Confirm Password.png',
+        'images/Set up MyAlgo Wallet/Screenshot 1 Access Wallet.png',
+        'images/Set up MyAlgo Wallet/Screenshot 5 Mnemonic Phrase.png',
+        'images/Set up MyAlgo Wallet/Screenshot 8 Create Password.png',
+        'images/Set up MyAlgo Wallet/Screenshot 7 Verify.png',
+        'images/Set up MyAlgo Wallet/Screenshot 2 Disclaimer.png',
+        'images/Set up MyAlgo Wallet/Screenshot 8 Dashboard.png',
+        'images/Set up AlgoSigner/Screen 8 - Confirm your phrase.png',
+        'images/Set up AlgoSigner/Screen 7 - Mnemonic Phrase.png',
+        'images/Set up AlgoSigner/Screen 4 - Add Account.png',
+        'images/Set up AlgoSigner/Screen 9 - Confirm Password.png',
+        'images/Set up AlgoSigner/Screen 6 - Create Account Name.png',
+        'images/Set up AlgoSigner/Screen 3 - Create Password.png',
+        'images/Set up AlgoSigner/Screen 1 - Add AlgoSigner.png',
+        'images/Set up AlgoSigner/Screen 5 - Create New Account.png',
+        'images/Set up AlgoSigner/Screen 2 - Get Started.png',
+        'images/Transfering ALGOs from Coinbase Mobile',
+        'images/Transfering ALGOs from Coinbase Mobile/Screen 2 - Select Algo-Amount.png',
+        'images/Transfering ALGOs from Coinbase Mobile/Screen 4.png',
+        'images/Transfering ALGOs from Coinbase Mobile/Screen 5.png',
+        'images/Transfering ALGOs from Coinbase Mobile/Screen 1 - Send-Receive.png',
+        'images/Transfering ALGOs from Coinbase Mobile/Screen 3 - Select Send.png',
+        'images/Set up Allgorand Mobile/Screen 3 - Create New Account.png',
+        'images/Set up Allgorand Mobile/Screen 5 - Prepare to writte down your recovery passphrase.png',
+        'images/Set up Allgorand Mobile/Screen 1 - Add.png',
+        'images/Set up Allgorand Mobile/Screen 2 - Add Account.png',
+        'images/Set up Allgorand Mobile/Screen 4 - Back up your account using a recovery passphrase.png',
+        'images/Set up Allgorand Mobile/Screen 7 - Verify Recovery passphrase.png',
+        'images/Set up Allgorand Mobile/Screen 6 - Recovery Passphrase.png',
+        'images/Set up Allgorand Mobile/Screen 8 - Name Account.png',
+        'images/Set up Allgorand Mobile/Initial Set up Screen 2.png',
+        'images/Set up Allgorand Mobile/Initial Set up Screen 1.png',
+        'images/Transfering ALGOs from Coinbase Desktop/Screen 1 - Send-Receive.png',
+        'images/Transfering ALGOs from Coinbase Desktop/Screen 2 - Add Amount and Select Algorand.png',
+        'images/Transfering ALGOs from Coinbase Desktop/Screen 3 - Send Now.png',
+        'images/Buying ALGOs from Kraken App/Screen 3 - Chosse Crypto.png',
+        'images/Buying ALGOs from Kraken App/Screen 1 - Buy-Sell Button.jpg',
+        'images/Buying ALGOs from Kraken App/Screen 4 - Choose Amount.png',
+        'images/Buying ALGOs from Kraken App/Screen 2 - Buy Option from drop down.jpg',
+        'images/Buying ALGOs from Kraken App/Screen 5 - Swipe to confirm.png',
+      ]
+      const $app = document.querySelector('#app');
+      const $table = document.createElement('table');
+      $table.cellSpacing = "20px";
+      $app.appendChild($table);
+      images.map(image => {
+        const $tr = document.createElement('tr');
+
+        const $td1 = document.createElement('td');
+        const $img = document.createElement('img');
+        $img.src = `./${image}`;
+        $img.style.maxWidth = '200px';
+        $img.style.maxHeight = '200px';
+        $td1.appendChild($img);
+
+        const $td2 = document.createElement('td');
+        const $a = document.createElement('a');
+        $a.href = `./${image}`;
+        $a.innerHTML = $a.href;
+        $td2.appendChild($a);
+
+        $tr.appendChild($td1);
+        $tr.appendChild($td2);
+        $table.appendChild($tr)
+      })
+    </script>
+
+
+  </body>
+</html>
